@@ -1,0 +1,606 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Task manager API",
+    "collectionId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+    "dateExported": "2026-11-13T12:54:13.932Z",
+    "version": "1.4",
+    "folders": [
+        {
+            "_id": "cce41b8c-bed3-41d6-8483-b82f29a776e3",
+            "name": "Users",
+            "containerId": "",
+            "created": "2026-11-09T03:30:04.073Z",
+            "sortNum": 7500
+        },
+        {
+            "_id": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "Tasks",
+            "containerId": "",
+            "created": "2026-11-08T07:24:06.307Z",
+            "sortNum": 15000
+        },
+        {
+            "_id": "0fae4692-2a98-4684-bff4-ae9d1cdcf706",
+            "name": "Profiles",
+            "containerId": "",
+            "created": "2026-11-08T07:24:45.954Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "20982c1c-38a8-4304-8fbd-303b24a0eb2b",
+            "name": "Categories",
+            "containerId": "",
+            "created": "2026-11-09T05:25:10.563Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "7582aaea-db22-434a-ac3a-0516c85ec6d5",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "Create",
+            "url": "http://127.0.0.1:8000/api/tasks",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2026-11-08T07:24:20.097Z",
+            "modified": "2026-11-08T07:24:20.097Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"title\": \"Reading\",",
+                    "  \"description\": \"Book\",",
+                    "  \"priority\": \"medium\"",
+                    "}"
+                ],
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "135659ab-ab63-4ef0-b6ba-759fd7d88172",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "cce41b8c-bed3-41d6-8483-b82f29a776e3",
+            "name": "Register",
+            "url": "http://127.0.0.1:8000/api/register",
+            "method": "POST",
+            "sortNum": 32500,
+            "created": "2026-11-09T06:31:53.427Z",
+            "modified": "2026-11-09T06:31:53.428Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"name\":\"jomana\",",
+                    "  \"email\":\"jomana@gmail.com\",",
+                    "  \"password\":\"jomana2002\",",
+                    "  \"password_confirmation\":\"jomana2002\"",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "e9624aaa-0c2a-4448-8f12-bd518dc3c39e",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "cce41b8c-bed3-41d6-8483-b82f29a776e3",
+            "name": "Login",
+            "url": "http://127.0.0.1:8000/api/login",
+            "method": "POST",
+            "sortNum": 48750,
+            "created": "2026-11-09T06:32:00.637Z",
+            "modified": "2026-11-09T06:32:00.637Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"name\":\"jomana\",",
+                    "  \"email\":\"jomana@gmail.com\",",
+                    "  \"password\":\"jomana2002\",",
+                    "  \"password_confirmation\":\"jomana2002\"",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "2321cfb7-20ac-414f-8810-f028467c8818",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "Update",
+            "url": "http://127.0.0.1:8000/api/tasks/92",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2026-11-08T08:53:08.885Z",
+            "modified": "2026-11-08T08:53:08.886Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"title\": \"Playing\",",
+                    "  \"description\": \"Football\",",
+                    "  \"priority\": \"2\"",
+                    "}"
+                ],
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "edba269a-1169-4d7b-90e2-9fadb064d2bd",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "0fae4692-2a98-4684-bff4-ae9d1cdcf706",
+            "name": "Create",
+            "url": "http://127.0.0.1:8000/api/profile",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2026-11-08T09:01:42.279Z",
+            "modified": "2026-11-08T09:01:42.279Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"phone\": \"+963111145299\",",
+                    "  \"address\": \"Aleppo, Syria\",",
+                    "  \"date_of_birth\": \"2026-11-08\",",
+                    "  \"bio\": \"Full-Stack Web Developer\",",
+                    "  \"user_id\": \"1\"",
+                    "}"
+                ],
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "961eccf0-b2b7-484f-9227-923871b7aec3",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "cce41b8c-bed3-41d6-8483-b82f29a776e3",
+            "name": "Logout",
+            "url": "http://127.0.0.1:8000/api/logout",
+            "method": "POST",
+            "sortNum": 56875,
+            "created": "2026-11-09T06:32:10.523Z",
+            "modified": "2026-11-09T06:32:10.523Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "8d179289-6e51-4946-a973-b8a71996678a",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "cce41b8c-bed3-41d6-8483-b82f29a776e3",
+            "name": "Show",
+            "url": "http://127.0.0.1:8000/api/user",
+            "method": "GET",
+            "sortNum": 60937.5,
+            "created": "2026-11-09T07:35:39.251Z",
+            "modified": "2026-11-09T07:35:39.251Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "e1966822-5582-4e7f-adfe-0815b0b8a17f",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "Show",
+            "url": "http://127.0.0.1:8000/api/tasks/2",
+            "method": "GET",
+            "sortNum": 65000,
+            "created": "2026-11-08T08:53:22.642Z",
+            "modified": "2026-11-08T08:53:22.642Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "1136f115-beea-4e7d-9138-2a800cfb688d",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "cce41b8c-bed3-41d6-8483-b82f29a776e3",
+            "name": "Get Profile User",
+            "url": "http://127.0.0.1:8000/api/user/1/profile",
+            "method": "GET",
+            "sortNum": 65000,
+            "created": "2026-11-09T03:30:34.608Z",
+            "modified": "2026-11-09T03:30:34.608Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "ba11079a-8c14-4228-92bb-7d28f106f9a3",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "cce41b8c-bed3-41d6-8483-b82f29a776e3",
+            "name": "Get Tasks User",
+            "url": "http://127.0.0.1:8000/api/user/1/tasks",
+            "method": "GET",
+            "sortNum": 75000,
+            "created": "2026-11-09T03:30:24.746Z",
+            "modified": "2026-11-09T03:30:24.746Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "292bf490-53ec-468e-baa5-22f39887fa3d",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "Delete",
+            "url": "http://127.0.0.1:8000/api/tasks/101",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2026-11-08T08:53:46.319Z",
+            "modified": "2026-11-08T08:53:46.319Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "73643f09-4490-47d2-8bb1-beef24175f47",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "0fae4692-2a98-4684-bff4-ae9d1cdcf706",
+            "name": "Update",
+            "url": "http://127.0.0.1:8000/api/profile/1",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2026-11-08T09:00:15.700Z",
+            "modified": "2026-11-08T09:00:15.700Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"phone\": \"+963442587966\",",
+                    "  \"address\": \"Damascus, Syria\",",
+                    "  \"date_of_birth\": \"2025-12-01\",",
+                    "  \"bio\": \"Back-End Web Developer\",",
+                    "  \"user_id\": \"2\"",
+                    "}",
+                    ""
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "956256b2-d6d5-4206-a55f-e00cd911692f",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "0fae4692-2a98-4684-bff4-ae9d1cdcf706",
+            "name": "Show",
+            "url": "http://127.0.0.1:8000/api/profile/2",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2026-11-08T09:00:32.078Z",
+            "modified": "2026-11-08T09:00:32.078Z",
+            "headers": []
+        },
+        {
+            "_id": "5a38cefc-c9ae-40a7-8226-0d1761332abc",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "Get Tasks",
+            "url": "http://127.0.0.1:8000/api/tasks",
+            "method": "GET",
+            "sortNum": 115000,
+            "created": "2026-11-11T08:22:55.411Z",
+            "modified": "2026-11-11T08:22:55.411Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "0a660bb2-ff17-4df8-9f30-123d95907b20",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "0fae4692-2a98-4684-bff4-ae9d1cdcf706",
+            "name": "Delete",
+            "url": "http://127.0.0.1:8000/api/profile/2",
+            "method": "DELETE",
+            "sortNum": 120000,
+            "created": "2026-11-08T09:00:38.465Z",
+            "modified": "2026-11-08T09:00:38.465Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "69f61ee3-b441-4bad-984b-d6dfc821428e",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "GetUser",
+            "url": "http://127.0.0.1:8000/api/tasks/11/user",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2026-11-09T03:46:27.536Z",
+            "modified": "2026-11-09T03:46:27.536Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "b24694b2-d457-4a20-a308-7bf0ecc280fb",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "Add Categories To Task",
+            "url": "http://127.0.0.1:8000/api/tasks/1/categories",
+            "method": "POST",
+            "sortNum": 160000,
+            "created": "2026-11-09T04:46:38.150Z",
+            "modified": "2026-11-09T04:46:38.150Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"category_id\": [1,2,3]",
+                    "}"
+                ],
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "fa4344c4-c66e-4bed-8637-e2e02d1cf03b",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "Get  Category task",
+            "url": "http://127.0.0.1:8000/api/categories/1/tasks",
+            "method": "GET",
+            "sortNum": 180000,
+            "created": "2026-11-09T05:25:26.869Z",
+            "modified": "2026-11-09T05:25:26.869Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "d9fe22f6-574f-4db0-91ae-ed1e1022c160",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "Get Task Categories",
+            "url": "http://127.0.0.1:8000/api/tasks/1/categories",
+            "method": "GET",
+            "sortNum": 190000,
+            "created": "2026-11-09T05:09:06.419Z",
+            "modified": "2026-11-09T05:09:06.419Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "e584886c-0395-4748-b6c7-3e1c60cf312f",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "GetTasksAll (Admin)",
+            "url": "http://127.0.0.1:8000/api/tasks/all",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2026-11-12T09:11:41.453Z",
+            "modified": "2026-11-12T09:11:41.455Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "d0412d05-977e-4bf4-97fb-32d81d9a20e1",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "get Tasks Ordered",
+            "url": "http://127.0.0.1:8000/api/tasks/ordered",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2026-11-12T11:15:06.679Z",
+            "modified": "2026-11-12T11:15:06.680Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{",
+                    "  \"direction\":\"asc\"",
+                    "}"
+                ],
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "e933ef95-f895-4787-bbf1-00afdbefd0be",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "Add Task To Favorites",
+            "url": "http://127.0.0.1:8000/api/tasks/2/favorite",
+            "method": "POST",
+            "sortNum": 220000,
+            "created": "2026-11-13T07:30:03.051Z",
+            "modified": "2026-11-13T07:30:03.052Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "9ac84161-4664-40bb-9ed6-bb1b6f253c85",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "Remove Task From Favorites",
+            "url": "http://127.0.0.1:8000/api/tasks/2/favorite",
+            "method": "DELETE",
+            "sortNum": 230000,
+            "created": "2026-11-13T07:39:07.079Z",
+            "modified": "2026-11-13T07:39:07.080Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        },
+        {
+            "_id": "f8999a6d-a782-475a-8ba2-4516db794a59",
+            "colId": "e855e9bf-4de2-4928-84ab-c0be4c14b6d9",
+            "containerId": "d1627dfa-a822-49f5-840a-8cd66c2c797f",
+            "name": "Get Favorite Tasks",
+            "url": "http://127.0.0.1:8000/api/tasks/favorites",
+            "method": "GET",
+            "sortNum": 240000,
+            "created": "2026-11-13T07:46:14.369Z",
+            "modified": "2026-11-13T07:46:14.369Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "YOUR_TOKEN_HERE"
+            }
+        }
+    ],
+    "ref": "Gy5f4H4VxOnQLHq1rcagIYSN-C2wfKiAbN5K6c_s7onQt4gF1JCMRD83rQDSDsvXNGRmAaPCd_tz7cxLhPhiyg"
+}
