@@ -6,6 +6,8 @@ use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
 use App\Models\Category;
 use App\Models\Task;
+// use Exception;
+// use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -188,4 +190,25 @@ class TaskController extends Controller
 
         return response()->json($tasks, 200);
     }
+
+    // public function delete(int $id)
+    // {
+    //     try {
+    //         $task = Task::findorFail($id);
+    //         $task->delete();
+
+    //         return response()->json('Task Deleted succuessfully ', 200);
+    //     } catch (ModelNotFoundException $m) {
+
+    //         return response()->json([
+    //             'error' => 'Task Not found',
+    //             'details' => $m->getMessage(),
+    //         ], 404);
+    //     } catch (Exception $m) {
+    //         return response()->json([
+    //             'error' => 'something went wrong while deleteing the task',
+    //             'details' => $m->getMessage(),
+    //         ], 404);
+    //     }
+    // }
 }

@@ -23,11 +23,12 @@ class StoreProfileRequest extends FormRequest
     public function rules(): array
     {
         return [
-        'user_id' => 'required|unique:profiles,user_id|exists:users,id',
-        'phone' => 'nullable|string|max:15',
-        'address' => 'nullable|string|max:100',
-        'date_of_birth' => 'nullable|date',
-        'bio' => 'nullable|string'
+            // 'user_id' => 'required|unique:profiles,user_id|exists:users,id',
+            'phone' => 'required|string|max:15',
+            'address' => 'nullable|string|max:100',
+            'date_of_birth' => 'nullable|date',
+            'bio' => 'nullable|string',
+            'image' => 'required|image|mimes:png,jpg,jpeg,gif|max:2048',
         ];
     }
     // احذف حقل user_id من مصفوفة الـ rules نهائياً، واجلب معرف المستخدم بأمان داخل الكنترولر مباشرة من الـ Authentication المتوفر في السيرفر كالتالي:

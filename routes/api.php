@@ -8,9 +8,11 @@ use App\Models\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+// Route::get('/user', function (Request $request) {
+//     return $request->user();
+// })->middleware('auth:sanctum');
+Route::get('/user', [UserController::class, 'getUser'])->middleware('auth:sanctum');
+Route::get('/allusers', [UserController::class, 'getAllUsers'])->middleware('auth:sanctum');
 
 Route::get('welcome to api', function () {
     return 'welcome to api';

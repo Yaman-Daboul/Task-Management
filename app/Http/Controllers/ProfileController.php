@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Profile;
 use App\Http\Requests\StoreProfileRequest;
 use App\Http\Requests\UpdateProfileRequest;
+use App\Models\Profile;
 use App\Models\User;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -23,10 +23,19 @@ class ProfileController extends Controller
      */
     public function store(StoreProfileRequest $request)
     {
-        $profile = Profile :: create($request->validated());
+        $userId = Auth::user()->id;
+        $validated = $request->validated();
+        $validated['user_id'] = $userId;
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('Profiles', 'public');
+            $validated['image'] = $path;
+        }
+        $profile = Profile::create($validated);
+
         return response()->json([
-        'message' => 'Profile created successfully.',
-        'profile' => $profile,
+            'message' => 'Profile created successfully.',
+            'profile' => $profile,
+            'image' => $path,
         ], 201);
     }
 
@@ -36,20 +45,24 @@ class ProfileController extends Controller
     public function show(int $id)
     {
         $profile = Profile::where('user_id', $id)->firstOrFail();
+
         return response()->json($profile, 200);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    function update(UpdateProfileRequest $request ,int $id){
+    public function update(UpdateProfileRequest $request, int $id)
+    {
         // $profile = Profile::query()->find($id);
-        $profile =User::find($id)->profile;
-        if ($profile){
-        $profile->update($request->validated());
+        $profile = User::find($id)->profile;
+        if ($profile) {
+            $profile->update($request->validated());
+
             return response()->json($profile);
-        }else
-            return response()->json(['message'=>'Please Enter a valid id'], 400);
+        } else {
+            return response()->json(['message' => 'Please Enter a valid id'], 400);
+        }
     }
 
     /**
